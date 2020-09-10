@@ -1,0 +1,934 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		485667EFA0B0963FD2040FF6 /* Pods_TKFiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AD371EC5201901B7DAACAE /* Pods_TKFiles.framework */; };
+		4E3EA82124CAC76F00276ECE /* TKFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EA82024CAC76F00276ECE /* TKFileModel.swift */; };
+		4E3FC06924E6314D006539A7 /* TKImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FC06824E6314D006539A7 /* TKImageViewController.swift */; };
+		4E405BDA24F50F3000071DE3 /* TKNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E405BD924F50F3000071DE3 /* TKNetworkViewController.swift */; };
+		4E51953124E545EA00CEC275 /* TKThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51953024E545E900CEC275 /* TKThumbnailGenerator.swift */; };
+		4E94472124E3837D00B31B5B /* UIImageView+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471524E3837D00B31B5B /* UIImageView+TK.swift */; };
+		4E94472224E3837D00B31B5B /* UIImage+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471624E3837D00B31B5B /* UIImage+TK.swift */; };
+		4E94472324E3837D00B31B5B /* Date+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471724E3837D00B31B5B /* Date+TK.swift */; };
+		4E94472424E3837D00B31B5B /* UILabel+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471824E3837D00B31B5B /* UILabel+TK.swift */; };
+		4E94472524E3837D00B31B5B /* UITextField+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471924E3837D00B31B5B /* UITextField+TK.swift */; };
+		4E94472624E3837D00B31B5B /* UIViewController+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471A24E3837D00B31B5B /* UIViewController+TK.swift */; };
+		4E94472724E3837D00B31B5B /* Notifications+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471B24E3837D00B31B5B /* Notifications+TK.swift */; };
+		4E94472824E3837D00B31B5B /* UIView+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471C24E3837D00B31B5B /* UIView+TK.swift */; };
+		4E94472924E3837D00B31B5B /* UIFont+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471D24E3837D00B31B5B /* UIFont+TK.swift */; };
+		4E94472A24E3837D00B31B5B /* UIButton+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471E24E3837D00B31B5B /* UIButton+TK.swift */; };
+		4E94472B24E3837D00B31B5B /* String+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94471F24E3837D00B31B5B /* String+TK.swift */; };
+		4E94472C24E3837D00B31B5B /* UIColor+TK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94472024E3837D00B31B5B /* UIColor+TK.swift */; };
+		4E94472E24E384F800B31B5B /* TKCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94472D24E384F800B31B5B /* TKCalendar.swift */; };
+		4E94473024E3850E00B31B5B /* TKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94472F24E3850E00B31B5B /* TKUtils.swift */; };
+		4E94473224E38A2100B31B5B /* TKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473124E38A2100B31B5B /* TKBaseView.swift */; };
+		4E94473424E38A3B00B31B5B /* TKBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */; };
+		4E94473624E38A8500B31B5B /* TKFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */; };
+		4EAD72A324CADEDC0060BF2F /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD729F24CADEDC0060BF2F /* video.mp4 */; };
+		4EAD72A424CADEDC0060BF2F /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD72A024CADEDC0060BF2F /* pdf.pdf */; };
+		4EAD72A624CADEDC0060BF2F /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD72A224CADEDC0060BF2F /* image.jpg */; };
+		4EAF0A2F248E05040023F8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A2E248E05040023F8B5 /* AppDelegate.swift */; };
+		4EAF0A31248E05040023F8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A30248E05040023F8B5 /* SceneDelegate.swift */; };
+		4EAF0A33248E05040023F8B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A32248E05040023F8B5 /* ViewController.swift */; };
+		4EAF0A36248E05040023F8B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF0A34248E05040023F8B5 /* Main.storyboard */; };
+		4EAF0A38248E050A0023F8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF0A37248E050A0023F8B5 /* Assets.xcassets */; };
+		4EAF0A3B248E050A0023F8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF0A39248E050A0023F8B5 /* LaunchScreen.storyboard */; };
+		4EAF0A46248E050B0023F8B5 /* TKFilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A45248E050B0023F8B5 /* TKFilesTests.swift */; };
+		4EAF0A51248E050B0023F8B5 /* TKFilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A50248E050B0023F8B5 /* TKFilesUITests.swift */; };
+		4EAF0A8F248E0A9C0023F8B5 /* TKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A8D248E0A9B0023F8B5 /* TKBaseViewController.swift */; };
+		4EAF0A90248E0A9C0023F8B5 /* TKTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A8E248E0A9C0023F8B5 /* TKTabBarViewController.swift */; };
+		4EAF0A92248E16750023F8B5 /* TKNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A91248E16750023F8B5 /* TKNavigationViewController.swift */; };
+		4EAF0A95248E17680023F8B5 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A94248E17680023F8B5 /* Logging.swift */; };
+		4EAF0A97248E17900023F8B5 /* NSObject+tk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0A96248E17900023F8B5 /* NSObject+tk.swift */; };
+		4EAF0AAB248E2EC90023F8B5 /* TKFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0AAA248E2EC90023F8B5 /* TKFileViewController.swift */; };
+		4EAF0AAD248E2F000023F8B5 /* TKFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF0AAC248E2F000023F8B5 /* TKFileManager.swift */; };
+		4EBEAB6624E2A1A60026433A /* TKRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBEAB6524E2A1A60026433A /* TKRouter.swift */; };
+		6C365879AABB368FDE7A965E /* Pods_TKFiles_TKFilesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332DAD4F05ACE69771CE3690 /* Pods_TKFiles_TKFilesUITests.framework */; };
+		A4AD3F2DE6DEEE2A39AD7004 /* Pods_TKFilesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB04724FFFB3D111D3764D00 /* Pods_TKFilesTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EAF0A42248E050B0023F8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EAF0A23248E05040023F8B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EAF0A2A248E05040023F8B5;
+			remoteInfo = TKFiles;
+		};
+		4EAF0A4D248E050B0023F8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EAF0A23248E05040023F8B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EAF0A2A248E05040023F8B5;
+			remoteInfo = TKFiles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27A0C69CAF59A91B88E85469 /* Pods-TKFiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFiles.debug.xcconfig"; path = "Target Support Files/Pods-TKFiles/Pods-TKFiles.debug.xcconfig"; sourceTree = "<group>"; };
+		332DAD4F05ACE69771CE3690 /* Pods_TKFiles_TKFilesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKFiles_TKFilesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AD371EC5201901B7DAACAE /* Pods_TKFiles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKFiles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4790AB3CE1022FC6021DFEFE /* Pods-TKFilesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFilesTests.debug.xcconfig"; path = "Target Support Files/Pods-TKFilesTests/Pods-TKFilesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E3EA82024CAC76F00276ECE /* TKFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFileModel.swift; sourceTree = "<group>"; };
+		4E3FC06824E6314D006539A7 /* TKImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKImageViewController.swift; sourceTree = "<group>"; };
+		4E405BD924F50F3000071DE3 /* TKNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKNetworkViewController.swift; sourceTree = "<group>"; };
+		4E51953024E545E900CEC275 /* TKThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKThumbnailGenerator.swift; sourceTree = "<group>"; };
+		4E94471524E3837D00B31B5B /* UIImageView+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TK.swift"; sourceTree = "<group>"; };
+		4E94471624E3837D00B31B5B /* UIImage+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TK.swift"; sourceTree = "<group>"; };
+		4E94471724E3837D00B31B5B /* Date+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TK.swift"; sourceTree = "<group>"; };
+		4E94471824E3837D00B31B5B /* UILabel+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+TK.swift"; sourceTree = "<group>"; };
+		4E94471924E3837D00B31B5B /* UITextField+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+TK.swift"; sourceTree = "<group>"; };
+		4E94471A24E3837D00B31B5B /* UIViewController+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TK.swift"; sourceTree = "<group>"; };
+		4E94471B24E3837D00B31B5B /* Notifications+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+TK.swift"; sourceTree = "<group>"; };
+		4E94471C24E3837D00B31B5B /* UIView+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TK.swift"; sourceTree = "<group>"; };
+		4E94471D24E3837D00B31B5B /* UIFont+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+TK.swift"; sourceTree = "<group>"; };
+		4E94471E24E3837D00B31B5B /* UIButton+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+TK.swift"; sourceTree = "<group>"; };
+		4E94471F24E3837D00B31B5B /* String+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TK.swift"; sourceTree = "<group>"; };
+		4E94472024E3837D00B31B5B /* UIColor+TK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TK.swift"; sourceTree = "<group>"; };
+		4E94472D24E384F800B31B5B /* TKCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKCalendar.swift; sourceTree = "<group>"; };
+		4E94472F24E3850E00B31B5B /* TKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKUtils.swift; sourceTree = "<group>"; };
+		4E94473124E38A2100B31B5B /* TKBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseView.swift; sourceTree = "<group>"; };
+		4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseTableViewCell.swift; sourceTree = "<group>"; };
+		4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFileTableViewCell.swift; sourceTree = "<group>"; };
+		4EAD729F24CADEDC0060BF2F /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		4EAD72A024CADEDC0060BF2F /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf.pdf; sourceTree = "<group>"; };
+		4EAD72A224CADEDC0060BF2F /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		4EAF0A2B248E05040023F8B5 /* TKFiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKFiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EAF0A2E248E05040023F8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4EAF0A30248E05040023F8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4EAF0A32248E05040023F8B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EAF0A35248E05040023F8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EAF0A37248E050A0023F8B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EAF0A3A248E050A0023F8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EAF0A3C248E050A0023F8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EAF0A41248E050B0023F8B5 /* TKFilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EAF0A45248E050B0023F8B5 /* TKFilesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFilesTests.swift; sourceTree = "<group>"; };
+		4EAF0A47248E050B0023F8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EAF0A4C248E050B0023F8B5 /* TKFilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKFilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EAF0A50248E050B0023F8B5 /* TKFilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFilesUITests.swift; sourceTree = "<group>"; };
+		4EAF0A52248E050B0023F8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EAF0A8D248E0A9B0023F8B5 /* TKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKBaseViewController.swift; sourceTree = "<group>"; };
+		4EAF0A8E248E0A9C0023F8B5 /* TKTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTabBarViewController.swift; sourceTree = "<group>"; };
+		4EAF0A91248E16750023F8B5 /* TKNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKNavigationViewController.swift; sourceTree = "<group>"; };
+		4EAF0A94248E17680023F8B5 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		4EAF0A96248E17900023F8B5 /* NSObject+tk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+tk.swift"; sourceTree = "<group>"; };
+		4EAF0AAA248E2EC90023F8B5 /* TKFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFileViewController.swift; sourceTree = "<group>"; };
+		4EAF0AAC248E2F000023F8B5 /* TKFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFileManager.swift; sourceTree = "<group>"; };
+		4EBEAB6524E2A1A60026433A /* TKRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKRouter.swift; sourceTree = "<group>"; };
+		794FE348CC27F3447DFFE518 /* Pods-TKFiles-TKFilesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFiles-TKFilesUITests.debug.xcconfig"; path = "Target Support Files/Pods-TKFiles-TKFilesUITests/Pods-TKFiles-TKFilesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B7CAE10B929272BB3FE3FDD /* Pods-TKFiles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFiles.release.xcconfig"; path = "Target Support Files/Pods-TKFiles/Pods-TKFiles.release.xcconfig"; sourceTree = "<group>"; };
+		91E398E016BF670A8D4FFB1B /* Pods-TKFilesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFilesTests.release.xcconfig"; path = "Target Support Files/Pods-TKFilesTests/Pods-TKFilesTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB7D513414A584E0572B627E /* Pods-TKFiles-TKFilesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKFiles-TKFilesUITests.release.xcconfig"; path = "Target Support Files/Pods-TKFiles-TKFilesUITests/Pods-TKFiles-TKFilesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CB04724FFFB3D111D3764D00 /* Pods_TKFilesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKFilesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EAF0A28248E05040023F8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485667EFA0B0963FD2040FF6 /* Pods_TKFiles.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A3E248E050B0023F8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AD3F2DE6DEEE2A39AD7004 /* Pods_TKFilesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A49248E050B0023F8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C365879AABB368FDE7A965E /* Pods_TKFiles_TKFilesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E51952E24E5433600CEC275 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4E51953024E545E900CEC275 /* TKThumbnailGenerator.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4E94471424E3837D00B31B5B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E94471524E3837D00B31B5B /* UIImageView+TK.swift */,
+				4E94471624E3837D00B31B5B /* UIImage+TK.swift */,
+				4E94471724E3837D00B31B5B /* Date+TK.swift */,
+				4E94471824E3837D00B31B5B /* UILabel+TK.swift */,
+				4E94471924E3837D00B31B5B /* UITextField+TK.swift */,
+				4E94471A24E3837D00B31B5B /* UIViewController+TK.swift */,
+				4E94471B24E3837D00B31B5B /* Notifications+TK.swift */,
+				4E94471C24E3837D00B31B5B /* UIView+TK.swift */,
+				4E94471D24E3837D00B31B5B /* UIFont+TK.swift */,
+				4E94471E24E3837D00B31B5B /* UIButton+TK.swift */,
+				4E94471F24E3837D00B31B5B /* String+TK.swift */,
+				4E94472024E3837D00B31B5B /* UIColor+TK.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4EAF0A22248E05040023F8B5 = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A2D248E05040023F8B5 /* TKFiles */,
+				4EAF0A44248E050B0023F8B5 /* TKFilesTests */,
+				4EAF0A4F248E050B0023F8B5 /* TKFilesUITests */,
+				4EAF0A2C248E05040023F8B5 /* Products */,
+				A08DB3F0AC53C89D086EF7F2 /* Pods */,
+				EA770D344D3C3411D4CE7596 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4EAF0A2C248E05040023F8B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A2B248E05040023F8B5 /* TKFiles.app */,
+				4EAF0A41248E050B0023F8B5 /* TKFilesTests.xctest */,
+				4EAF0A4C248E050B0023F8B5 /* TKFilesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EAF0A2D248E05040023F8B5 /* TKFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A8A248E07F30023F8B5 /* ViewController */,
+				4EAF0A8C248E080F0023F8B5 /* View */,
+				4EAF0A8B248E08090023F8B5 /* Model */,
+				4EBEAB6424E2A1910026433A /* Router */,
+				4EAF0A93248E17570023F8B5 /* Utils */,
+				4EAF0A2E248E05040023F8B5 /* AppDelegate.swift */,
+				4EAF0A30248E05040023F8B5 /* SceneDelegate.swift */,
+				4EAF0A32248E05040023F8B5 /* ViewController.swift */,
+				4EAF0A34248E05040023F8B5 /* Main.storyboard */,
+				4EAF0A37248E050A0023F8B5 /* Assets.xcassets */,
+				4EAF0A39248E050A0023F8B5 /* LaunchScreen.storyboard */,
+				4EAF0A3C248E050A0023F8B5 /* Info.plist */,
+				4EAD72A224CADEDC0060BF2F /* image.jpg */,
+				4EAD72A024CADEDC0060BF2F /* pdf.pdf */,
+				4EAD729F24CADEDC0060BF2F /* video.mp4 */,
+			);
+			path = TKFiles;
+			sourceTree = "<group>";
+		};
+		4EAF0A44248E050B0023F8B5 /* TKFilesTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A45248E050B0023F8B5 /* TKFilesTests.swift */,
+				4EAF0A47248E050B0023F8B5 /* Info.plist */,
+			);
+			path = TKFilesTests;
+			sourceTree = "<group>";
+		};
+		4EAF0A4F248E050B0023F8B5 /* TKFilesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A50248E050B0023F8B5 /* TKFilesUITests.swift */,
+				4EAF0A52248E050B0023F8B5 /* Info.plist */,
+			);
+			path = TKFilesUITests;
+			sourceTree = "<group>";
+		};
+		4EAF0A8A248E07F30023F8B5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0A8D248E0A9B0023F8B5 /* TKBaseViewController.swift */,
+				4EAF0A8E248E0A9C0023F8B5 /* TKTabBarViewController.swift */,
+				4EAF0A91248E16750023F8B5 /* TKNavigationViewController.swift */,
+				4EAF0AAA248E2EC90023F8B5 /* TKFileViewController.swift */,
+				4E3FC06824E6314D006539A7 /* TKImageViewController.swift */,
+				4E405BD924F50F3000071DE3 /* TKNetworkViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4EAF0A8B248E08090023F8B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF0AAC248E2F000023F8B5 /* TKFileManager.swift */,
+				4E3EA82024CAC76F00276ECE /* TKFileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EAF0A8C248E080F0023F8B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E94473124E38A2100B31B5B /* TKBaseView.swift */,
+				4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */,
+				4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EAF0A93248E17570023F8B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E51952E24E5433600CEC275 /* UI */,
+				4E94471424E3837D00B31B5B /* Extension */,
+				4EAF0A94248E17680023F8B5 /* Logging.swift */,
+				4EAF0A96248E17900023F8B5 /* NSObject+tk.swift */,
+				4E94472D24E384F800B31B5B /* TKCalendar.swift */,
+				4E94472F24E3850E00B31B5B /* TKUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4EBEAB6424E2A1910026433A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4EBEAB6524E2A1A60026433A /* TKRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A08DB3F0AC53C89D086EF7F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C69CAF59A91B88E85469 /* Pods-TKFiles.debug.xcconfig */,
+				8B7CAE10B929272BB3FE3FDD /* Pods-TKFiles.release.xcconfig */,
+				794FE348CC27F3447DFFE518 /* Pods-TKFiles-TKFilesUITests.debug.xcconfig */,
+				BB7D513414A584E0572B627E /* Pods-TKFiles-TKFilesUITests.release.xcconfig */,
+				4790AB3CE1022FC6021DFEFE /* Pods-TKFilesTests.debug.xcconfig */,
+				91E398E016BF670A8D4FFB1B /* Pods-TKFilesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA770D344D3C3411D4CE7596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AD371EC5201901B7DAACAE /* Pods_TKFiles.framework */,
+				332DAD4F05ACE69771CE3690 /* Pods_TKFiles_TKFilesUITests.framework */,
+				CB04724FFFB3D111D3764D00 /* Pods_TKFilesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EAF0A2A248E05040023F8B5 /* TKFiles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EAF0A55248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFiles" */;
+			buildPhases = (
+				735C31219A16313613A3697D /* [CP] Check Pods Manifest.lock */,
+				4EAF0A27248E05040023F8B5 /* Sources */,
+				4EAF0A28248E05040023F8B5 /* Frameworks */,
+				4EAF0A29248E05040023F8B5 /* Resources */,
+				49A5754A1349C3BAC6AB59C2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKFiles;
+			productName = TKFiles;
+			productReference = 4EAF0A2B248E05040023F8B5 /* TKFiles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EAF0A40248E050B0023F8B5 /* TKFilesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EAF0A58248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFilesTests" */;
+			buildPhases = (
+				D7264B17A40E3A37638143A0 /* [CP] Check Pods Manifest.lock */,
+				4EAF0A3D248E050B0023F8B5 /* Sources */,
+				4EAF0A3E248E050B0023F8B5 /* Frameworks */,
+				4EAF0A3F248E050B0023F8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EAF0A43248E050B0023F8B5 /* PBXTargetDependency */,
+			);
+			name = TKFilesTests;
+			productName = TKFilesTests;
+			productReference = 4EAF0A41248E050B0023F8B5 /* TKFilesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EAF0A4B248E050B0023F8B5 /* TKFilesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EAF0A5B248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFilesUITests" */;
+			buildPhases = (
+				A2F4B54CADFCBCE94AEE608C /* [CP] Check Pods Manifest.lock */,
+				4EAF0A48248E050B0023F8B5 /* Sources */,
+				4EAF0A49248E050B0023F8B5 /* Frameworks */,
+				4EAF0A4A248E050B0023F8B5 /* Resources */,
+				D8D1272A8D037FDCA9AB1E4F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EAF0A4E248E050B0023F8B5 /* PBXTargetDependency */,
+			);
+			name = TKFilesUITests;
+			productName = TKFilesUITests;
+			productReference = 4EAF0A4C248E050B0023F8B5 /* TKFilesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EAF0A23248E05040023F8B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TK;
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = caanvu;
+				TargetAttributes = {
+					4EAF0A2A248E05040023F8B5 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					4EAF0A40248E050B0023F8B5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4EAF0A2A248E05040023F8B5;
+					};
+					4EAF0A4B248E050B0023F8B5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4EAF0A2A248E05040023F8B5;
+					};
+				};
+			};
+			buildConfigurationList = 4EAF0A26248E05040023F8B5 /* Build configuration list for PBXProject "TKFiles" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EAF0A22248E05040023F8B5;
+			productRefGroup = 4EAF0A2C248E05040023F8B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EAF0A2A248E05040023F8B5 /* TKFiles */,
+				4EAF0A40248E050B0023F8B5 /* TKFilesTests */,
+				4EAF0A4B248E050B0023F8B5 /* TKFilesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EAF0A29248E05040023F8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EAF0A3B248E050A0023F8B5 /* LaunchScreen.storyboard in Resources */,
+				4EAF0A38248E050A0023F8B5 /* Assets.xcassets in Resources */,
+				4EAD72A424CADEDC0060BF2F /* pdf.pdf in Resources */,
+				4EAD72A624CADEDC0060BF2F /* image.jpg in Resources */,
+				4EAF0A36248E05040023F8B5 /* Main.storyboard in Resources */,
+				4EAD72A324CADEDC0060BF2F /* video.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A3F248E050B0023F8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A4A248E050B0023F8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A5754A1349C3BAC6AB59C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKFiles/Pods-TKFiles-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKFiles/Pods-TKFiles-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TKFiles/Pods-TKFiles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		735C31219A16313613A3697D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TKFiles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F4B54CADFCBCE94AEE608C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TKFiles-TKFilesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7264B17A40E3A37638143A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TKFilesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D1272A8D037FDCA9AB1E4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKFiles-TKFilesUITests/Pods-TKFiles-TKFilesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKFiles-TKFilesUITests/Pods-TKFiles-TKFilesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TKFiles-TKFilesUITests/Pods-TKFiles-TKFilesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EAF0A27248E05040023F8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E405BDA24F50F3000071DE3 /* TKNetworkViewController.swift in Sources */,
+				4E94472924E3837D00B31B5B /* UIFont+TK.swift in Sources */,
+				4E94473424E38A3B00B31B5B /* TKBaseTableViewCell.swift in Sources */,
+				4E94473624E38A8500B31B5B /* TKFileTableViewCell.swift in Sources */,
+				4E94472124E3837D00B31B5B /* UIImageView+TK.swift in Sources */,
+				4EAF0AAB248E2EC90023F8B5 /* TKFileViewController.swift in Sources */,
+				4EAF0A92248E16750023F8B5 /* TKNavigationViewController.swift in Sources */,
+				4EAF0A33248E05040023F8B5 /* ViewController.swift in Sources */,
+				4E94472B24E3837D00B31B5B /* String+TK.swift in Sources */,
+				4E94473024E3850E00B31B5B /* TKUtils.swift in Sources */,
+				4EAF0A8F248E0A9C0023F8B5 /* TKBaseViewController.swift in Sources */,
+				4EAF0A95248E17680023F8B5 /* Logging.swift in Sources */,
+				4E51953124E545EA00CEC275 /* TKThumbnailGenerator.swift in Sources */,
+				4E94472C24E3837D00B31B5B /* UIColor+TK.swift in Sources */,
+				4E94472524E3837D00B31B5B /* UITextField+TK.swift in Sources */,
+				4E94472A24E3837D00B31B5B /* UIButton+TK.swift in Sources */,
+				4EAF0AAD248E2F000023F8B5 /* TKFileManager.swift in Sources */,
+				4EAF0A2F248E05040023F8B5 /* AppDelegate.swift in Sources */,
+				4E94472224E3837D00B31B5B /* UIImage+TK.swift in Sources */,
+				4E94472424E3837D00B31B5B /* UILabel+TK.swift in Sources */,
+				4E94472724E3837D00B31B5B /* Notifications+TK.swift in Sources */,
+				4E94473224E38A2100B31B5B /* TKBaseView.swift in Sources */,
+				4EAF0A90248E0A9C0023F8B5 /* TKTabBarViewController.swift in Sources */,
+				4E94472324E3837D00B31B5B /* Date+TK.swift in Sources */,
+				4E94472624E3837D00B31B5B /* UIViewController+TK.swift in Sources */,
+				4EAF0A97248E17900023F8B5 /* NSObject+tk.swift in Sources */,
+				4E94472E24E384F800B31B5B /* TKCalendar.swift in Sources */,
+				4E3FC06924E6314D006539A7 /* TKImageViewController.swift in Sources */,
+				4EBEAB6624E2A1A60026433A /* TKRouter.swift in Sources */,
+				4EAF0A31248E05040023F8B5 /* SceneDelegate.swift in Sources */,
+				4E3EA82124CAC76F00276ECE /* TKFileModel.swift in Sources */,
+				4E94472824E3837D00B31B5B /* UIView+TK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A3D248E050B0023F8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EAF0A46248E050B0023F8B5 /* TKFilesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EAF0A48248E050B0023F8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EAF0A51248E050B0023F8B5 /* TKFilesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EAF0A43248E050B0023F8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EAF0A2A248E05040023F8B5 /* TKFiles */;
+			targetProxy = 4EAF0A42248E050B0023F8B5 /* PBXContainerItemProxy */;
+		};
+		4EAF0A4E248E050B0023F8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EAF0A2A248E05040023F8B5 /* TKFiles */;
+			targetProxy = 4EAF0A4D248E050B0023F8B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EAF0A34248E05040023F8B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EAF0A35248E05040023F8B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4EAF0A39248E050A0023F8B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EAF0A3A248E050A0023F8B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EAF0A53248E050B0023F8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EAF0A54248E050B0023F8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EAF0A56248E050B0023F8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A0C69CAF59A91B88E85469 /* Pods-TKFiles.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFiles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EAF0A57248E050B0023F8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B7CAE10B929272BB3FE3FDD /* Pods-TKFiles.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFiles;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EAF0A59248E050B0023F8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4790AB3CE1022FC6021DFEFE /* Pods-TKFilesTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFilesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFilesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFiles.app/TKFiles";
+			};
+			name = Debug;
+		};
+		4EAF0A5A248E050B0023F8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91E398E016BF670A8D4FFB1B /* Pods-TKFilesTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFilesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFilesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TKFiles.app/TKFiles";
+			};
+			name = Release;
+		};
+		4EAF0A5C248E050B0023F8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 794FE348CC27F3447DFFE518 /* Pods-TKFiles-TKFilesUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFilesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFilesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TKFiles;
+			};
+			name = Debug;
+		};
+		4EAF0A5D248E050B0023F8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB7D513414A584E0572B627E /* Pods-TKFiles-TKFilesUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Z858DX22R;
+				INFOPLIST_FILE = TKFilesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caanvu.TKFilesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TKFiles;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EAF0A26248E05040023F8B5 /* Build configuration list for PBXProject "TKFiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EAF0A53248E050B0023F8B5 /* Debug */,
+				4EAF0A54248E050B0023F8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EAF0A55248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EAF0A56248E050B0023F8B5 /* Debug */,
+				4EAF0A57248E050B0023F8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EAF0A58248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFilesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EAF0A59248E050B0023F8B5 /* Debug */,
+				4EAF0A5A248E050B0023F8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EAF0A5B248E050B0023F8B5 /* Build configuration list for PBXNativeTarget "TKFilesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EAF0A5C248E050B0023F8B5 /* Debug */,
+				4EAF0A5D248E050B0023F8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EAF0A23248E05040023F8B5 /* Project object */;
+}

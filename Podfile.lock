@@ -1,0 +1,20 @@
+PODS:
+  - SnapKit (5.0.1)
+  - SwiftPullToRefresh (3.1.1)
+
+DEPENDENCIES:
+  - SnapKit
+  - SwiftPullToRefresh
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - SwiftPullToRefresh
+
+SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftPullToRefresh: f61d67439c5b8d66420fe57193cab8c279398e7a
+
+PODFILE CHECKSUM: b458b4ce9e6fba5d91d095126fee8e91737b9216
+
+COCOAPODS: 1.9.1
