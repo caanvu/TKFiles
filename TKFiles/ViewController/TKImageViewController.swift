@@ -10,59 +10,57 @@ import UIKit
 
 class TKImageViewController: TKBaseViewController {
     let scrollView = UIScrollView()
-    let imageView = UIImageView()
-    var model: TKFileModel?
+    var models: [TKFileModel] = []
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let cellId = "cellId"
+    var cacheImages: [URL:UIImage] = [:]
+    var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupUI()
-        loadData()
+
     }
     
     override func loadView() {
         super.loadView()
         view = scrollView
-        imageView.frame = view.bounds
-        imageView.contentMode = .scaleAspectFit
-        imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+        collectionView.frame = view.bounds
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     func setupUI() {
-        title = model?.name
-        extendedLayoutIncludesOpaqueBars = false
-        edgesForExtendedLayout = []
+        title = models.first?.name
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(clickClose(bar:)))
 
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 2
         scrollView.delegate = self
-        scrollView.addSubview(imageView)
+        scrollView.addSubview(collectionView)
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(TKImageViewController.tapScrollView(ges:)))
         scrollView.addGestureRecognizer(tapGes)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(clickClose(bar:)))
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.minimumLineSpacing = 10
+            layout.minimumInteritemSpacing = 10
+        }
+        collectionView.backgroundColor = .white
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(TKImageCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+        // layout
+        scrollView.addSubview(collectionView)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .top, animated: true)
     }
     @objc func tapScrollView(ges: UIGestureRecognizer) {
         if let nav = navigationController {
-            nav.isNavigationBarHidden = !nav.isNavigationBarHidden
+            let value = !nav.isNavigationBarHidden
+            nav.setNavigationBarHidden(value, animated: true)
         }
-    }
-    func loadData() {
-        guard let url = model?.url, let data = try? Data(contentsOf: url) else {
-            return
-        }
-        imageView.image = UIImage(data: data)
-    }
-    
-    func centerImageView() {
-        var vertical: CGFloat = 0, horizontal: CGFloat = 0
-        if scrollView.contentSize.width < view.bounds.width {
-            horizontal = (scrollView.bounds.width - scrollView.contentSize.width)/2
-        }
-        if scrollView.contentSize.height < view.bounds.height {
-            vertical = (scrollView.bounds.height - scrollView.contentSize.height)/2
-        }
-        scrollView.contentInset = UIEdgeInsets(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
     }
     
     
@@ -83,10 +81,61 @@ class TKImageViewController: TKBaseViewController {
 
 extension TKImageViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return imageView
+        if scrollView == self.scrollView {
+            return collectionView
+        } else {
+            return nil
+        }
     }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        centerImageView()
+        if scrollView == self.scrollView {
+            scrollView.contentSize = CGSize(width: scrollView.frame.width * scrollView.zoomScale, height: scrollView.frame.height)
+        }
+    }
+}
+
+extension TKImageViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let model = models[indexPath.row]
+        let width = scrollView.bounds.width
+        var height = scrollView.bounds.height
+        let imageSize = model.imageSize()
+        height = width / imageSize.width * imageSize.height
+        return CGSize(width: width, height: height)
+    }
+    
+}
+
+extension TKImageViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return models.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let model = models[indexPath.row]
+        if let imageCell = cell as? TKImageCollectionViewCell {
+            let size = scrollView.bounds.size
+            imageCell.imageUrl = model.url
+            DispatchQueue.global().async {
+                let imageSize = model.imageSize()
+                let height = size.width / imageSize.width * imageSize.height
+                let image = model.getImage(size: CGSize(width: size.width, height: height))
+                DispatchQueue.main.async {
+                    if imageCell.imageUrl == model.url {
+                        imageCell.imageView.image = image == nil ? nil : UIImage(cgImage: image!)
+                    }
+                }
+            }
+        }
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        logging(indexPath.row)
     }
 }

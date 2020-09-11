@@ -25,20 +25,27 @@ class TKFileManager: NSObject {
             return
         }
         self.rootUrl = url
-        rootModel = TKFileModel(url: url, name: "文件")
+        rootModel = TKFileModel(url: url)
+        rootModel?.name = "文件"
         test()
     }
     func getFiles(url: URL?) -> [TKFileModel] {
         if let url = url, let urls = try? manager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles) {
             var arr: [TKFileModel] = []
             for url in urls {
-                let model = TKFileModel(url: url, name: url.deletingPathExtension().lastPathComponent)
+                let model = TKFileModel(url: url)
                 arr.append(model)
             }
-            return arr
+            return arr.sorted(by: { $0.name < $1.name })
         }
         return []
     }
+    
+    func createFolder(_ name: String, model: TKFileModel) {
+        try? manager.createDirectory(at: model.url.appendingPathComponent(name), withIntermediateDirectories: true, attributes: nil)
+        model.updateChildren()
+    }
+    
     func test() {
         let directoryURL = self.rootUrl!
         let arr = try? manager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)

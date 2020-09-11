@@ -27,6 +27,11 @@ class TKBaseViewController: UIViewController, UIGestureRecognizerDelegate {
         logging("初始化了->\(tkClassName)")
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         view.backgroundColor = UIColor.white
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

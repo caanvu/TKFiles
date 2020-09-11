@@ -12,6 +12,7 @@ let tkFileTableViewCellImageSize = CGSize(width: 50, height: 50)
 class TKFileTableViewCell: TKBaseTableViewCell {
     let leftImageView = UIImageView(image: UIImage.listFile)
     let titleLabel = UILabel(UIColor.text1, fontSize: UIFont.textFontSize1)
+    var url: URL?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +24,7 @@ class TKFileTableViewCell: TKBaseTableViewCell {
         // Configure the view for the selected state
     }
     override func setupUI() {
+        leftImageView.contentMode = .scaleAspectFit
         contentView.addSubview(leftImageView)
         contentView.addSubview(titleLabel)
         leftImageView.snp.makeConstraints { (make) in
@@ -40,6 +42,8 @@ class TKFileTableViewCell: TKBaseTableViewCell {
     }
     func updateUI(_ title: String?, image: UIImage?) {
         titleLabel.text = title
-        leftImageView.image = image
+        if let item = image {
+            leftImageView.image = image
+        }
     }
 }

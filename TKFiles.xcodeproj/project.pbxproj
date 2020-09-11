@@ -29,6 +29,8 @@
 		4E94473224E38A2100B31B5B /* TKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473124E38A2100B31B5B /* TKBaseView.swift */; };
 		4E94473424E38A3B00B31B5B /* TKBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */; };
 		4E94473624E38A8500B31B5B /* TKFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */; };
+		4E9FC044250A2EA00025DE4A /* TKImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC043250A2EA00025DE4A /* TKImageCollectionViewCell.swift */; };
+		4E9FC046250A2EB70025DE4A /* TKBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC045250A2EB70025DE4A /* TKBaseCollectionViewCell.swift */; };
 		4EAD72A324CADEDC0060BF2F /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD729F24CADEDC0060BF2F /* video.mp4 */; };
 		4EAD72A424CADEDC0060BF2F /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD72A024CADEDC0060BF2F /* pdf.pdf */; };
 		4EAD72A624CADEDC0060BF2F /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD72A224CADEDC0060BF2F /* image.jpg */; };
@@ -95,6 +97,8 @@
 		4E94473124E38A2100B31B5B /* TKBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseView.swift; sourceTree = "<group>"; };
 		4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseTableViewCell.swift; sourceTree = "<group>"; };
 		4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKFileTableViewCell.swift; sourceTree = "<group>"; };
+		4E9FC043250A2EA00025DE4A /* TKImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E9FC045250A2EB70025DE4A /* TKBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EAD729F24CADEDC0060BF2F /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		4EAD72A024CADEDC0060BF2F /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf.pdf; sourceTree = "<group>"; };
 		4EAD72A224CADEDC0060BF2F /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
@@ -271,7 +275,9 @@
 			children = (
 				4E94473124E38A2100B31B5B /* TKBaseView.swift */,
 				4E94473324E38A3B00B31B5B /* TKBaseTableViewCell.swift */,
+				4E9FC045250A2EB70025DE4A /* TKBaseCollectionViewCell.swift */,
 				4E94473524E38A8500B31B5B /* TKFileTableViewCell.swift */,
+				4E9FC043250A2EA00025DE4A /* TKImageCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,7 +591,9 @@
 				4E94472424E3837D00B31B5B /* UILabel+TK.swift in Sources */,
 				4E94472724E3837D00B31B5B /* Notifications+TK.swift in Sources */,
 				4E94473224E38A2100B31B5B /* TKBaseView.swift in Sources */,
+				4E9FC044250A2EA00025DE4A /* TKImageCollectionViewCell.swift in Sources */,
 				4EAF0A90248E0A9C0023F8B5 /* TKTabBarViewController.swift in Sources */,
+				4E9FC046250A2EB70025DE4A /* TKBaseCollectionViewCell.swift in Sources */,
 				4E94472324E3837D00B31B5B /* Date+TK.swift in Sources */,
 				4E94472624E3837D00B31B5B /* UIViewController+TK.swift in Sources */,
 				4EAF0A97248E17900023F8B5 /* NSObject+tk.swift in Sources */,

@@ -22,6 +22,7 @@ class TKFileViewController: TKBaseViewController {
     
     func setupUI() {
         title = model?.name
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.clickAdd(button:)))
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -37,16 +38,25 @@ class TKFileViewController: TKBaseViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func addFolder() {
+        let alertController = UIAlertController(title: "提示", message: "请输入名称", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "确定", style: .default) { [weak self](_) in
+            if let text = alertController.textFields?.first?.text, let model = self?.model {
+                tkSharedFileManager.createFolder(text, model: model)
+                self?.tableView.reloadData()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
+            
+        }
+        alertController.addTextField { (textField) in
+            
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+        self.navigationController?.present(alertController, animated: true, completion: nil)
     }
-    */
+    
     func image(model: TKFileModel?) -> UIImage? {
         guard let model = model else {
             return nil
@@ -64,7 +74,19 @@ class TKFileViewController: TKBaseViewController {
         }
         return image
     }
-
+    // MARK: - action
+    @objc func clickAdd(button: UIButton) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let addAction = UIAlertAction(title: "新建文件夹", style: .default) { [weak self](_) in
+            self?.addFolder()
+        }
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
+            
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(addAction)
+        self.navigationController?.present(alertController, animated: true, completion: nil)
+    }
 }
 
 //MARK: - tableviewDelegate
@@ -81,7 +103,8 @@ extension TKFileViewController: UITableViewDelegate {
                 TKRouter.push(from: self, to: vc)
             case .image:
                 let vc = TKImageViewController()
-                vc.model = current
+                vc.models = model?.children.filter({ $0.type == .image }) ?? []
+                vc.index = vc.models.firstIndex(of: current) ?? 0
                 let nav = TKNavigationViewController(rootViewController: vc)
                 nav.modalPresentationStyle = .fullScreen
                 TKRouter.present(from: self, to: nav)
@@ -107,11 +130,14 @@ extension TKFileViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         if let fileCell = cell as? TKFileTableViewCell {
             let current = model?.children[indexPath.row]
-            fileCell.updateUI(current?.name, image: UIImage.listFile)
+            fileCell.updateUI(current?.name, image: nil)
+            fileCell.url = current?.url
             DispatchQueue.global().async { [weak self] in
                 let image = self?.image(model: current)
                 DispatchQueue.main.async {
-                    fileCell.updateUI(current?.name, image: image)
+                    if current?.url == fileCell.url {
+                        fileCell.updateUI(current?.name, image: image)
+                    }
                 }
             }
         }
